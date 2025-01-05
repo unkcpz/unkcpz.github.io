@@ -5,7 +5,7 @@ googleAnalytics = ""
 ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
 languageCode = "en-us"
 theme = "customize-classic"
-title = "Home_Here_Dont_Panic"
+title = "Index_Here_Dont_Panic"
 
 [markup.goldmark.renderer]
 unsafe = true
@@ -39,4 +39,4 @@ weight = 2
 [params]
 custom_css = ["css/theme-override.css"]
 description = "blog for write things down for future"
-footer = "Open-Source | [Github (@unkcpz)](https://github.com/unkcpz/) | [Keybase (@jusongyu)](https://keybase.io/jusongyu)"
+footer = "[Github (@unkcpz)](https://github.com/unkcpz/) | [Keybase (@jusongyu)](https://keybase.io/jusongyu)"
