@@ -1,0 +1,17 @@
+description = "A minimal blog theme, for those who love text. Based off the eXtremely minimal theme by Kellen Evan Person by Yihui Xui."
+features = ["blog"]
+homepage = "https://orange-box.cc/"
+license = "MIT"
+min_version = "0.18"
+name = "Hugo - Customize Classic"
+tags = ["blog", "personal", "simple", "clean", "starter", "darkmode"]
+
+[author]
+author = "Jusong Yu"
+homepage = "https://orange-box.cc/"
+repo = "https://github.com/unkcpz/hblog"
+
+[original]
+homepage = "https://goodroot.ca"
+name = "Kellen Evan Person"
+
