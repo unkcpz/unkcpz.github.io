@@ -3,7 +3,7 @@ title: Frontend development with only python, blessing or curse?
 author: Jusong Yu
 date: '2023-12-20'
 categories:
-    - frontend
+    - post
 tags:
     - python
     - jupyter
