@@ -1,5 +1,5 @@
 ---
-title: "Step by step: electron-nuclear Energy in terms of density `n(r)`"
+title: "Step by step: electron-nuclear Energy in terms of density $n(r)$"
 date: '2019-08-12'
 categories:
     - note

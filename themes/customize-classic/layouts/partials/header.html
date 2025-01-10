@@ -45,7 +45,7 @@
           </li>
           {{end}}
 
-          {{ range .Site.Menus.feed }}
+          {{ range .Site.Menus.cv }}
           {{ $name := lower .Name}}
           <li class="pull-right">
             <a href="{{ .URL }}">~/{{ lower .Name}}</a>
