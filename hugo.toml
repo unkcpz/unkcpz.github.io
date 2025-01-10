@@ -36,6 +36,11 @@ name = "Tags"
 url = "/tags/"
 weight = 2
 
+[[menu.main]]
+name = "CV"
+url = "/cv/"
+weight = 3
+
 [params]
 custom_css = ["css/theme-override.css"]
 description = "blog for write things down for future"

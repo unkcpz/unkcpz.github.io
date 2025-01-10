@@ -16,7 +16,6 @@ description: "Personal writings and expressions."
 <!-- Their greatest joys are darkness and its quietudes. -->
 
 <!-- <img src="/images/partywizard.gif"> -->
-
 ---
 
 ## Etwas
