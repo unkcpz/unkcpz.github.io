@@ -2,12 +2,13 @@
 title: Home
 description: "Personal writings and expressions." 
 ---
+## Hi my friend,
+
 <img
   id="orange"
   src="/images/proff.jpg"
   alt="The orange face">
 
-## Hi my friend,
 
 ### :earth_asia: :orange:
 

@@ -138,9 +138,17 @@ header ol {
     padding: 0;
     list-style: none
 }
+
 header nav {
+    flex-wrap: wrap;
     padding: 0 0.5rem
 }
+
+header nav a {
+    color: white;
+    text-decoration: none;
+}
+
 
 header a {
     color: #fff;
@@ -211,14 +219,36 @@ blockquote {
 }
 
 /* Small devices, phones */
-@media only screen and (min-width : 480px) {
-  #foxy {
-    min-width: 40px;
-    float: center;
-    padding: 10px 10px 10px 20px;
-    display: block;
-  }
+@media (max-width: 768px) {
+    #foxy {
+      min-width: 40px;
+      float: center;
+      padding: 10px 10px 10px 20px;
+      display: block;
+    }
 
+    header nav {
+      display: flex;
+      flex-wrap: wrap;            /* Allow items to wrap to new lines */
+      justify-content: space-between; /* Keep left/right aligned */
+      align-items: center;
+      width: 100%;
+      background: #613DC1;
+      padding: 0 0.5rem;
+    }
+
+    /* override pull aligh */
+    .pull-left {
+        float: left
+    }
+    .pull-right {
+        float: left
+    }
+
+    nav a {
+        flex: 1 1 100%;
+        text-align: center;
+    }
 }
 
 /* 在大屏幕上应用特定样式 */
