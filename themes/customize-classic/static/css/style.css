@@ -51,7 +51,7 @@
     }
 
     .article-meta, .menu a {
-      background: #E8DBC5;
+      background: #f9f9f9;
       color: #000;
     }
 
@@ -205,7 +205,7 @@ blockquote {
 }
 
 .content-wrapper {
-  padding: 0px 12px 0px 12px;
+  padding: 20px 12px 0px 12px;
 }
 #foxy {
   min-width: 40px;
