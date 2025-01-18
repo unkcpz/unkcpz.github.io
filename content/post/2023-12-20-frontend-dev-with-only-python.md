@@ -8,6 +8,7 @@ tags:
     - python
     - jupyter
     - frontend
+draft: true
 ---
 
 # Frontend development with only python, blessing or curse?

@@ -7,4 +7,5 @@ categories:
 tags:
     - neovim 
     - ide
+draft: true
 ---
