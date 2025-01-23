@@ -69,3 +69,17 @@ node = engine.submit(opt_workflow)
 ```
 
 It requires to store the local state of a for loop.
+
+## Reintrospect why AiiDA workchain is hard to reasoning
+
+- Workchain is good in bring programing logic naturelly.
+- But it break the brain logic on how to separate into atomic steps. It become users responsibility to category instructions into blocks.
+- `for` is popular in python, althrough while is enough for all logic. 
+- It also introduce complex by let user decide which variables should cross the boundary of instructions, or go to context.
+
+## The path to the dream
+
+- a customize workchain like that can run steps from outer defined functions.
+- from beginning nothing will cross the boundary.
+- introduce ctx to hold things cross boundary.
+
