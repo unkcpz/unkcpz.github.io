@@ -48,7 +48,7 @@ def opt_workflow():
     y_doe = []
     for x in x_doe:
         # Here is the change, where the evaluation can happened in remote resource
-        y = submit(xsinx, x=x)
+        y = submit(xsinx, x=x).await
 
         y_doe.append(y)
 
