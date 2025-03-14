@@ -10,10 +10,12 @@ tags:
 
 <!-- # Debugging Asynchronous Programming in AiiDA -->
 
-Asynchronous allows program to scale better by switching tasks run on CPU while waiting on I/O, network operations, or other tasks that don’t require constant processing. 
-However, debugging async code can be tricky especially in the context of **AiiDA**, where the event loop may be configured in unorthodox ways.
+This blog is the backup of what I publish on the AiiDA blog: https://aiida.net/news/posts/2025-01-31-how-to-debug-async-in-aiida.html
 
-In this blog post, we will:
+Asynchronous allows program to scale better by switching tasks run on CPU while waiting on I/O, network operations, or other tasks that don’t require constant processing. 
+However, debugging async code can be tricky especially in the context of **AiiDA**, where the event loop may be configured in a uncommon ways.
+
+In this blog post, I will:
 
 1. Introduce asynchronous programming in AiiDA.  
 1. Explore why debugging async code is difficult.  
@@ -90,7 +92,7 @@ Previously, AiiDA used [`tornado`](https://www.tornadoweb.org/en/stable/), a sep
 
 To ensure compatibility with the original design, AiiDA utilize [`nest-asyncio`](https://github.com/erdewit/nest_asyncio), which allows re-entry into event loops. 
 This approach enables AiiDA to manage a single event loop per thread, allowing all processes to run asynchronously within that loop.
-Meanwhile, we recognizing that most AiiDA users come from scientific fields where asynchronous programming may be unfamiliar and challenging to work with.
+Meanwhile, I recognizing that most AiiDA users come from scientific fields where asynchronous programming may be unfamiliar and challenging to work with.
 By exposing the synchronous `execute` method of AiiDA process to end user, so user don't need to struggle about any asynchronous programming. 
 
 This also allows AiiDA to run asynchronous code in an interactive environment like an IPython shell. 
@@ -105,7 +107,7 @@ Since the main thread is not always the one directly running the event loop, sta
 AiiDA’s `verdi daemon` or its internal runners can communicate with each other (and with the client) via remote procedure calls (RPC). 
 Debugging these interactions can be complicated when you have multiple processes or threads exchanging async messages.
 
-It means when using AiiDA in production, we are facing two levels of concurrency.
+It means when using AiiDA in production, I are facing two levels of concurrency.
 The AiiDA workers are run in independent interpreters which not sharing the memory. 
 Each worker manages its own event loop that interleave and jump between for running processes. 
 
@@ -258,5 +260,5 @@ Asynchronous programming enables AiiDA to manage complex, distributed nested wor
 From standard Python debugging approaches (`pdb`, logging, trace tools) to more advanced techniques like `aiomonitor`, there are ways to tackle the challenges. 
 While some approaches work seamlessly, others need adaptation for AiiDA’s nest-asyncio and multi-process environment.
 
-By continuing to improve our asynchronous design, refine our logging strategies, adopting specialized debugging tools, and sharing best practices across the community, we hope can make async in AiiDA robust for everyone. 
+By continuing to improve our asynchronous design, refine our logging strategies, adopting specialized debugging tools, and sharing best practices across the community, I hope can make async in AiiDA robust for everyone. 
 
