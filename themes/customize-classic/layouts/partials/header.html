@@ -14,21 +14,61 @@
       };
     </script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+          const toggleButton = document.getElementById("theme-toggle");
+          const body = document.body;
 
+          const darkThemeLink = document.getElementById("dark-theme");
+          const lightThemeLink = document.getElementById("light-theme");
 
+          // Load user's preference or system preference
+          const currentTheme = localStorage.getItem("theme") ||
+              (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
 
+          body.classList.add(currentTheme + "-mode");
+
+          // Function to switch syntax highlighting styles
+          function updateSyntaxHighlighting(theme) {
+              if (theme === "dark") {
+                  darkThemeLink.disabled = false;
+                  lightThemeLink.disabled = true;
+              } else {
+                  darkThemeLink.disabled = true;
+                  lightThemeLink.disabled = false;
+              }
+          }
+
+          // Apply initial theme
+          updateSyntaxHighlighting(currentTheme);
+
+          // Theme toggle event listener
+          toggleButton.addEventListener("click", () => {
+              if (body.classList.contains("dark-mode")) {
+                  body.classList.replace("dark-mode", "light-mode");
+                  localStorage.setItem("theme", "light");
+                  updateSyntaxHighlighting("light");
+              } else {
+                  body.classList.replace("light-mode", "dark-mode");
+                  localStorage.setItem("theme", "dark");
+                  updateSyntaxHighlighting("dark");
+              }
+          });
+      });
+    </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.Description }}{{ end }}">
     <title>{{ .Title }} | {{ .Site.Title }}</title>
     <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}" />
     <link rel="stylesheet" href="{{ "/css/fonts.css" | relURL }}" />
+    <link rel="stylesheet" href="{{ "/css/light-syntax.css" | relURL }}" id="light-theme">
+    <link rel="stylesheet" href="{{ "/css/dark-syntax.css" | relURL }}" id="dark-theme" disabled>
     {{ range .Site.Params.custom_css -}}
     <link rel="stylesheet" href="{{ . | absURL }}">
     {{- end }}
     {{ partial "head_custom.html" . }}
   </head>
-
   <body>
     <header>
       <nav>
@@ -44,15 +84,15 @@
             <a href="{{ .URL }}">~/{{ lower .Name }}</a>
           </li>
           {{end}}
-
+          <li class="pull-right">
+            <button id="theme-toggle">dark/light</button>
+          </li>
           {{ range .Site.Menus.cv }}
           {{ $name := lower .Name}}
           <li class="pull-right">
             <a href="{{ .URL }}">~/{{ lower .Name}}</a>
           </li>
           {{end}}
-
         </ul>
       </nav>
     </header>
-

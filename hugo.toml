@@ -12,15 +12,16 @@ unsafe = true
 
 [markup.highlight]
 anchorLineNos = false
-codeFences = true
 guessSyntax = false
 hl_Lines = ""
 lineAnchors = ""
 lineNoStart = 1
 lineNos = false
 lineNumbersInTable = true
-noClasses = true
+noClasses = false
 style = "monokai"
+codeFences = true
+
 tabWidth = 4
 
 [permalinks]
