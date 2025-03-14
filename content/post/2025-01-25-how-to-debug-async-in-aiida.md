@@ -1,5 +1,5 @@
 ---
-title: Debugging Asynchronous Programming in AiiDA
+title: Debugging asynchronous code in AiiDA
 date: '2025-01-25'
 categories:
     - post
@@ -44,7 +44,6 @@ However, a key idea is that await allows the event loop to run other coroutines 
 Using `await` cooperatively giving control back to the event loop whenever you do something that can be awaited.
 
 Alternatively, you can schedule a coroutine as a task in the event loop, allowing it to be picked up in the next iteration and run concurrently with other tasks.
-Scheduling a coroutine as a task with something like `asyncio.create_task(...)` that allows to run concurrently with other tasks. 
 This means the event loop will interleave their execution. 
 In practical sense, each task appears to run at the same time, but under the hood, the event loop is switching between tasks when they hit I/O or an await.
 
