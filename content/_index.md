@@ -10,11 +10,13 @@ description: "Personal writings and expressions."
   alt="The orange face"
   style="float: left; width: 150px; height: auto; margin-right: 10px;">
 
-I’m a Postdoctoral Researcher at the Paul Scherrer Institute, where I investigate the fascinating world of computational condensed matter physics. 
-My day-to-day work involves simulating novel materials and developing tool for tackling quantum-scale challenges using Rust, Julia, and Python. 
-I’m also exploring new frontiers in web development, currently diving into HTMX to enhance my projects. 
-Welcome to my blog, a space where I capture and share my ideas, research insights, and ongoing adventures in coding.
+I am a research software engineer in ETH Zürich, with a PhD in Physics.
 
+I do Rust / Python / Julia / C at my day job, helping researchers to optimize their code to run efficiently on HPC.
+At night, I do game development exploring my dream territory (a dream to become a game developer to bring fun to the world from when I was 12 yrs, sadly I became a scientist then).
+
+I have deep love for high-performance software.
+I am also an AI skeptic, and I commit to not using AI-generated code.
 
 ### :earth_asia: :orange:
 
